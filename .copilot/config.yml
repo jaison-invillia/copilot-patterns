@@ -1,0 +1,53 @@
+# GitHub Copilot Spaces Configuration
+# Este arquivo configura o comportamento do Copilot para este repositório
+
+# Nome do workspace
+name: "Copilot Patterns"
+
+# Descrição
+description: "Repositório centralizado de padrões, prompts e diretrizes para GitHub Copilot"
+
+# Configurações do Copilot
+copilot:
+  # Habilitar recursos avançados
+  advanced_features: true
+  
+  # Diretórios de referência
+  reference_directories:
+    - prompts
+    - chatmodes
+    - instructions
+    - architecture
+    - templates
+    - guidelines
+  
+  # Configurações de contexto
+  context:
+    max_file_size: 1048576  # 1MB
+    include_patterns:
+      - "**/*.md"
+      - "**/*.yml"
+      - "**/*.yaml"
+      - "**/*.json"
+    exclude_patterns:
+      - ".git/**"
+      - "node_modules/**"
+      - "dist/**"
+      - "build/**"
+
+# Configurações de chat modes
+chat_modes:
+  enabled: true
+  modes_directory: "chatmodes"
+
+# Configurações de prompts
+prompts:
+  enabled: true
+  prompts_directory: "prompts"
+  auto_suggest: true
+
+# Configurações de instruções
+instructions:
+  enabled: true
+  instructions_directory: "instructions"
+  apply_on_startup: true
